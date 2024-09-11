@@ -18,5 +18,6 @@ use Illuminate\Support\Facades\Route;
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
-Route::post('/reel/upload',[ReelController::class,'upload']);
-Route::post('/reel/{id}',[ReelController::class,'single']);
+Route::get('/reels',[ReelController::class,'list']);
+Route::get('/reels/{id}',[ReelController::class,'single']);
+Route::post('/reels/upload',[ReelController::class,'upload']);

@@ -24,7 +24,7 @@ class ReelController extends Controller
         ]);
     }
     
-    public function all(Request $request) {
+    public function list(Request $request) {
         $reels = Reel::orderBy('id','desc')->paginate(20);
         return $reels;
     }
